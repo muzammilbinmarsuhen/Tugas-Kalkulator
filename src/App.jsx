@@ -46,19 +46,19 @@ export default function App() {
         <View style={styles.numbers}>
           <View style={styles.row}>
             <TouchableOpacity
-              onPress={() => onButtonClick(1)}
+              onPress={() => onButtonClick(7)}
               style={styles.btn}>
-              <Text style={styles.number}>1</Text>
+              <Text style={styles.number}>7</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick(2)}
+              onPress={() => onButtonClick(8)}
               style={styles.btn}>
-              <Text style={styles.number}>2</Text>
+              <Text style={styles.number}>8</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick(3)}
+              onPress={() => onButtonClick(9)}
               style={styles.btn}>
-              <Text style={styles.number}>3</Text>
+              <Text style={styles.number}>9</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.row}>
@@ -80,26 +80,26 @@ export default function App() {
           </View>
           <View style={styles.row}>
             <TouchableOpacity
-              onPress={() => onButtonClick(7)}
+              onPress={() => onButtonClick(1)}
               style={styles.btn}>
-              <Text style={styles.number}>7</Text>
+              <Text style={styles.number}>1</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick(8)}
+              onPress={() => onButtonClick(2)}
               style={styles.btn}>
-              <Text style={styles.number}>8</Text>
+              <Text style={styles.number}>2</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick(9)}
+              onPress={() => onButtonClick(3)}
               style={styles.btn}>
-              <Text style={styles.number}>9</Text>
+              <Text style={styles.number}>3</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.row}>
             <TouchableOpacity
-              onPress={() => onButtonClick('.')}
+              onPress={() => onButtonClick(',')}
               style={styles.btn}>
-              <Text style={styles.number}>.</Text>
+              <Text style={styles.number}>,</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => onButtonClick(0)}
