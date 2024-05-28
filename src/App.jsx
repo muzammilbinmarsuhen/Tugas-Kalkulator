@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
   result: {
     flex: 2,
-    backgroundColor: 'black',
+    backgroundColor: '#101010',
     justifyContent: 'center',
     alignItems: 'flex-end',
   },
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
   },
   calculation: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: '#101010',
     justifyContent: 'center',
     alignItems: 'flex-end',
   },
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   },
   numbers: {
     flex: 4,
-    backgroundColor: '#434343',
+    backgroundColor: '#1e1e1e',
   },
   row: {
     flexDirection: 'row',
@@ -200,12 +200,12 @@ const styles = StyleSheet.create({
   },
   operations: {
     flex: 1,
-    backgroundColor: '#636363',
+    backgroundColor: '#1e1e1e',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   operationButton: {
     fontSize: 30,
-    color: 'white',
+    color: 'green',
   },
 });
