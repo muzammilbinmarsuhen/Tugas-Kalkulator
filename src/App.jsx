@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, Button} from 'react-native';
+import React, { useState } from "react";
+import { StyleSheet, View, Text, TouchableOpacity, Button } from "react-native";
 
 export default function App() {
-  const [resultText, setResultText] = useState('');
-  const [calcText, setCalcText] = useState('');
-  const onButtonClick = text => {
-    if (text == '=') {
+  const [resultText, setResultText] = useState("");
+  const [calcText, setCalcText] = useState("");
+  const onButtonClick = (text) => {
+    if (text == "=") {
       return calculateResult();
     }
     setResultText(resultText + text);
@@ -15,22 +15,20 @@ export default function App() {
     setCalcText(eval(resultText));
   };
 
-  const onOperationClick = operation => {
-    let operations = ['DEL', '+', '-', '*', '/'];
+  const onOperationClick = (operation) => {
+    let operations = ["DEL", "+", "-", "*", "/"];
 
-    if (operation == 'DEL') {
+    if (operation == "DEL") {
       return setResultText(
-        resultText.toString().substring(0, resultText.length - 1),
+        resultText.toString().substring(0, resultText.length - 1)
       );
     }
-    if (operation == 'AC') {
-      setResultText('');
+    if (operation == "AC") {
+      setResultText("");
       setCalcText(0);
       return;
     }
-    if (operations.includes(resultText.toString().split('').pop())) {
-      return;
-    }
+    if (operations.includes(resultText.toString().split("").pop())) return;
     setResultText(resultText + operation);
   };
 
@@ -47,101 +45,119 @@ export default function App() {
           <View style={styles.row}>
             <TouchableOpacity
               onPress={() => onButtonClick(1)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>1</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => onButtonClick(2)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>2</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => onButtonClick(3)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>3</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.row}>
             <TouchableOpacity
               onPress={() => onButtonClick(4)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>4</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => onButtonClick(5)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>5</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => onButtonClick(6)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>6</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.row}>
             <TouchableOpacity
               onPress={() => onButtonClick(7)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>7</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => onButtonClick(8)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>8</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => onButtonClick(9)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>9</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.row}>
             <TouchableOpacity
-              onPress={() => onButtonClick('.')}
-              style={styles.btn}>
+              onPress={() => onButtonClick(".")}
+              style={styles.btn}
+            >
               <Text style={styles.number}>.</Text>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => onButtonClick(0)}
-              style={styles.btn}>
+              style={styles.btn}
+            >
               <Text style={styles.number}>0</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => onButtonClick('=')}
-              style={styles.btn}>
+              onPress={() => onButtonClick("=")}
+              style={styles.btn}
+            >
               <Text style={styles.number}>=</Text>
             </TouchableOpacity>
           </View>
         </View>
         <View style={styles.operations}>
           <TouchableOpacity
-            onPress={() => onOperationClick('DEL')}
-            style={styles.btn}>
+            onPress={() => onOperationClick("DEL")}
+            style={styles.btn}
+          >
             <Text style={styles.operationButton}>DEL</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => onOperationClick('AC')}
-            style={styles.btn}>
+            onPress={() => onOperationClick("AC")}
+            style={styles.btn}
+          >
             <Text style={styles.operationButton}>AC</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => onOperationClick('+')}
-            style={styles.btn}>
+            onPress={() => onOperationClick("+")}
+            style={styles.btn}
+          >
             <Text style={styles.operationButton}>+</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => onOperationClick('-')}
-            style={styles.btn}>
+            onPress={() => onOperationClick("-")}
+            style={styles.btn}
+          >
             <Text style={styles.operationButton}>-</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => onOperationClick('/')}
-            style={styles.btn}>
+            onPress={() => onOperationClick("/")}
+            style={styles.btn}
+          >
             <Text style={styles.operationButton}>/</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => onOperationClick('*')}
-            style={styles.btn}>
+            onPress={() => onOperationClick("*")}
+            style={styles.btn}
+          >
             <Text style={styles.operationButton}>*</Text>
           </TouchableOpacity>
         </View>
@@ -155,57 +171,57 @@ const styles = StyleSheet.create({
   },
   result: {
     flex: 2,
-    backgroundColor: 'grey',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
+    backgroundColor: "black",
+    justifyContent: "center",
+    alignItems: "flex-end",
   },
   resultText: {
-    fontSize: 30,
-    color: 'white',
+    fontSize: 50,
+    color: "white",
   },
   calculationText: {
-    fontSize: 20,
-    color: 'black',
-    fontWeight: 'bold',
+    fontSize: 50,
+    color: "white",
+    fontWeight: "bold",
   },
   number: {
     fontSize: 30,
-    color: 'white',
+    color: "white",
   },
   calculation: {
     flex: 1,
-    backgroundColor: '#d6d6c2',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
+    backgroundColor: "black",
+    justifyContent: "center",
+    alignItems: "flex-end",
   },
   btn: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'stretch',
-    fontSize: '30',
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "stretch",
+    fontSize: "30",
   },
   buttons: {
-    flex: 7,
-    flexDirection: 'row',
+    flex: 3,
+    flexDirection: "row",
   },
   numbers: {
-    flex: 3,
-    backgroundColor: '#434343',
+    flex: 4,
+    backgroundColor: "#434343",
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: "row",
     flex: 1,
-    justifyContent: 'space-around',
-    alignItems: 'center',
+    justifyContent: "space-around",
+    alignItems: "center",
   },
   operations: {
     flex: 1,
-    backgroundColor: '#636363',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    backgroundColor: "#636363",
+    alignItems: "center",
+    justifyContent: "space-around",
   },
   operationButton: {
     fontSize: 30,
-    color: 'white',
+    color: "white",
   },
 });
