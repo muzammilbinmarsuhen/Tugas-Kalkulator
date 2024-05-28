@@ -135,9 +135,9 @@ export default function App() {
             <Text style={styles.operationButton}>-</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => onOperationClick('/')}
+            onPress={() => onOperationClick('÷')}
             style={styles.btn}>
-            <Text style={styles.operationButton}>/</Text>
+            <Text style={styles.operationButton}>÷</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => onOperationClick('*')}
